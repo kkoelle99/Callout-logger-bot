@@ -1,6 +1,7 @@
 const { google } = require("googleapis");
+require("dotenv").config();
 const mongoose = require("mongoose");
-const credentials = require("./config/google-credentials.json");
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 // Google Sheets API Setup
 const auth = new google.auth.GoogleAuth({
