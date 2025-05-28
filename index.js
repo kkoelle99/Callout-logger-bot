@@ -45,7 +45,7 @@ client.on("messageCreate", async (message) => {
       // Save or update the server's spreadsheet link
       await SpreadsheetLink.findOneAndUpdate(
         { guildId: message.guild.id },
-        { spreadsheetId },
+        { spreadsheetId, userId: message.author.id },
         { upsert: true, new: true }
       );
 
