@@ -17,5 +17,5 @@ const SpreadsheetLinkSchema = new mongoose.Schema({
   },
 });
 
+// Export the model only
 module.exports = mongoose.model("SpreadsheetLink", SpreadsheetLinkSchema);
-module.exports = SpreadsheetLinkSchema;
